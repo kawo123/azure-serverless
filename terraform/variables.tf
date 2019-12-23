@@ -1,6 +1,6 @@
 variable "prefix" {
   description = "The prefix which should be used for all resources in this project"
-  default = "azure-srvless-kwf"
+  default = "azure-srvless"
 }
 
 variable "location" {

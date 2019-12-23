@@ -1,4 +1,4 @@
-# Azure Search
+# Azure Serverless
 
 Azure serverless demo highlighting key functionalities of Azure Function, Logic App, and Event Grid.
 
@@ -20,6 +20,18 @@ Azure serverless demo highlighting key functionalities of Azure Function, Logic 
   - Run `terraform plan -out=out.tfplan`
   - Run `terraform apply out.tfplan`
   - Note the outputs of `terraform apply`
+
+## Next Steps
+
+- [] Demo Azure Function in JS
+- [] Demo Azure Function in Python
+- [] Logic App Integration
+- [] Event hub integration
+- [] CI/CD
+- [] Telemetry
+- [] API management
+- [] Alerts & Notification
+- [] DR
 
 ---
 
