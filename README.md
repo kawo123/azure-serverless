@@ -21,6 +21,11 @@ Azure serverless demo highlighting key functionalities of Azure Function, Logic 
   - Run `terraform apply out.tfplan`
   - Note the outputs of `terraform apply`
 
+- Create service principal
+  - `az ad sp create-for-rbac --name "myApp" --role contributor --scopes /subscriptions/<SUBSCRIPTION_ID>/resourceGroups/<RESOURCE_GROUP>/providers/Microsoft.Web/sites/<APP_NAME> --sdk-auth`
+
+- Add service principal to GitHub as secret
+
 ## Next Steps
 
 - [] Demo Azure Function in JS
