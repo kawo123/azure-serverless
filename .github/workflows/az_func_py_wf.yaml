@@ -49,5 +49,5 @@ jobs:
         package: './functions'
 
     - name: 'use the published functionapp url in upcoming steps'
-     run: |
-       echo "${{ steps.fa.outputs.app-url }}"
+      run: |
+        echo "${{ steps.fa.outputs.app-url }}"
