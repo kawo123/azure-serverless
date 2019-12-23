@@ -26,7 +26,7 @@ resource "azurerm_application_insights" "serverless-appinsight" {
   name                = "${var.prefix}-appinsight"
   location            = "${azurerm_resource_group.serverless-rg.location}"
   resource_group_name = "${azurerm_resource_group.serverless-rg.name}"
-  application_type    = "Node.JS"
+  application_type    = "other"
 }
 
 resource "azurerm_app_service_plan" "serverless-app-plan" {
@@ -49,7 +49,7 @@ resource "azurerm_function_app" "serverless-function" {
   storage_connection_string = "${azurerm_storage_account.serverless-storage.primary_connection_string}"
   version                   = "~2"
   app_settings = {
-    "WEBSITE_NODE_DEFAULT_VERSION" = "10.14.1"
+    "FUNCTIONS_WORKER_RUNTIME" = "python"
     "APPINSIGHTS_INSTRUMENTATIONKEY" = "${azurerm_application_insights.serverless-appinsight.instrumentation_key}"
   }
 }
