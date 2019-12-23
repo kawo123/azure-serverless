@@ -33,7 +33,8 @@ resource "azurerm_app_service_plan" "serverless-app-plan" {
   name                = "${var.prefix}-app-plan"
   location            = "${azurerm_resource_group.serverless-rg.location}"
   resource_group_name = "${azurerm_resource_group.serverless-rg.name}"
-  kind                = "FunctionApp"
+  kind                = "Linux"
+  reserved            = true
 
   sku {
     tier = "Dynamic"
